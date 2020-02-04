@@ -1,0 +1,60 @@
+body{
+  margin: 40px;
+}
+.container {
+  display: grid;
+  /*grid-template-columns: 200px 200px;
+   grid-template-columns: 4fr 8fr;
+   grid-template-columns: 100% 100%;*/
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 20px;
+grid-template-rows: 200px 200px 200px;
+}
+
+.columna1{
+  background-color: yellow;
+   grid-column-start: 1;
+   grid-column-end: 2;
+   grid-column: span 3;
+
+}
+.columna2{
+  background-color: blue;
+grid-column: span 2;
+}
+.columna3{
+  background-color: red;
+
+}
+.columna4{
+  background-color: green;
+
+}
+.columna5{
+  background-color: pink;
+
+}
+.columna6{
+  background-color:aquamarine;
+
+}
+
+/* // [START mfluid] */
+      .container {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+      }
+
+      .columna1, .columna2, .columna3, .columna4, .columna5, .columna6 {
+        width: 100%;
+      }
+
+      @media (max-width: 600px) {
+        .columna2, .columna3, .columna4, .columna5, .columna6 {
+          width: 50%;
+
+        }
+      }
+      
